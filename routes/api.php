@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Support\Facades\Hash;
 
 /*
@@ -19,7 +20,7 @@ use Illuminate\Support\Facades\Hash;
 Route::prefix('auth')->group(function() {
 
     Route::post('login', [AuthController::class, 'login'])->name('login');
-    Route::post('register', [UserController::class, 'store'])->name('register');
+    Route::post('register', [UserController::class, 'store'])->name('store');
 
 });
 
